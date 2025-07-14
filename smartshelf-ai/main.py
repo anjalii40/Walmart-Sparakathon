@@ -102,9 +102,11 @@ def logout():
 
 # --- Routes ---
 @app.route("/")
+def landing():
+    return send_from_directory(app.static_folder, "index.html")
+
+@app.route("/dashboard")
 def dashboard():
-    if not is_logged_in():
-        return redirect(url_for('static_files', filename='index.html'))
     return render_template("index.html")
 
 @app.route("/static/<path:filename>")

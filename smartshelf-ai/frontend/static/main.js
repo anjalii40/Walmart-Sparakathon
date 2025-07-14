@@ -18,7 +18,8 @@ function login() {
         } else {
             alert('Invalid credentials');
         }
-    });
+    })
+    .catch(() => alert('Login failed.'));
 }
 
 function logout() {
@@ -46,7 +47,7 @@ function fetchProducts() {
 function updateTable(products) {
     const tbody = document.getElementById('products-table').querySelector('tbody');
     tbody.innerHTML = '';
-    products.forEach(prod => {
+    (products || []).forEach(prod => {
         let statusClass = '';
         if (prod.status === 'expired') statusClass = 'status-expired';
         else if (prod.status === 'near') statusClass = 'status-near';
@@ -54,7 +55,7 @@ function updateTable(products) {
         tbody.innerHTML += `<tr class="${statusClass}">
             <td>${prod.name}</td>
             <td>${prod.expiry}</td>
-            <td>${prod.status.charAt(0).toUpperCase() + prod.status.slice(1)}</td>
+            <td>${prod.status ? prod.status.charAt(0).toUpperCase() + prod.status.slice(1) : ''}</td>
             <td><button onclick="markChecked('${prod.id}')">Mark Checked</button></td>
         </tr>`;
     });

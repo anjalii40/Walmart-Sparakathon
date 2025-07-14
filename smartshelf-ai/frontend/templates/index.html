@@ -7,30 +7,37 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <div class="login-section" id="login-section">
-        <h2>Staff Login</h2>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="login()">Login</button>
-    </div>
-    <div class="dashboard-section" id="dashboard-section" style="display:none;">
-        <h1>SmartShelf AI Dashboard</h1>
-        <button onclick="rescanProducts()">Rescan Products</button>
-        <button onclick="sendNotifications()">Send Notifications</button>
-        <table id="products-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Expiry Date</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Product rows will be inserted here by JavaScript -->
-            </tbody>
-        </table>
-    </div>
+    <main class="container">
+        <section class="login-section" id="login-section">
+            <h2>Staff Login</h2>
+            <input type="text" id="username" placeholder="Username" autocomplete="username">
+            <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+            <button onclick="login()">Login</button>
+        </section>
+        <section class="dashboard-section" id="dashboard-section" style="display:none;">
+            <header>
+                <h1>SmartShelf AI Dashboard</h1>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </header>
+            <div class="actions">
+                <button onclick="rescanProducts()">Rescan Products</button>
+                <button onclick="sendNotifications()">Send Notifications</button>
+            </div>
+            <table id="products-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Expiry Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Product rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
     <script src="/static/main.js"></script>
 </body>
 </html>

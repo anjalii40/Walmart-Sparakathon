@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Milk",
+    "expiry": "2025-12-31",
+    "status": "safe"
+  },
+  {
+    "id": "2",
+    "name": "Yogurt",
+    "expiry": "2024-07-15",
+    "status": "near"
+  },
+  {
+    "id": "3",
+    "name": "Cheese",
+    "expiry": "2024-06-01",
+    "status": "expired"
+  }
+]
