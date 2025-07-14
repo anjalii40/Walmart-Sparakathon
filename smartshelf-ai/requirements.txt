@@ -1,0 +1,6 @@
+opencv-python
+pytesseract
+RPi.GPIO
+datetime
+twilio
+flask
