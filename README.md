@@ -249,5 +249,5 @@ Pull requests and suggestions are welcome! For major changes, please open an iss
 
 ---
 
-## 📝 License
-MIT License
+## ⚠️ License
+All rights reserved. This project and its contents are the intellectual property of **Anjali Prajapati**. No part of this project may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the copyright holder.
